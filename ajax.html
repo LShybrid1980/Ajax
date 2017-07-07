@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="ajax.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="ajax.css">
+    <title></title>
+  </head>
+
+  <body>
+    <div id="container" class="row">
+      <form id="registration-form">
+        <fieldset>
+          <legend id="legend">Personal information:</legend><br>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            First name:
+            <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Last name:
+            <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Date of Birth:
+            <label for="packt">Please Select date</label>
+            <input id="packt" class="form-control" type="date" value="1960-01-01"><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Email Address:
+            <input type="email" class="form-control" name="Email Address" required placeholder="Enter Email Address" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Street Address:
+            <input type="text" class="form-control" name="Street Address" placeholder="Enter the address" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Phone Number:
+            <input type="text" class="form-control" name="Phone Number" placeholder="XXX-XX-XXXX" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Username:
+            <input type="text" class="form-control" name="Username" placeholder="Enter Username" required><br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Password:
+            <input type="password" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd1" onchange="form.pwd2.pattern = this.value;" name="Password" placeholder="Enter New Password" required>
+            <p>Must be longer than 6 characters, must have atleast one capital letter and one small letter</p>
+            <br><br>
+          </div>
+          <div class="col-md-6 col-sm-12" class="form-group">
+            Confirm Password:
+            <input type="password" class="form-control" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2" name="Confirm Password" placeholder="Confirm New Password" required><br><br>
+          </div>
+          <div class="col-md-12" class="form-group">
+            <input type="submit" id="submit-button" value="Submit">
+          </div>
+        </fieldset>
+      </form>
+      <div id="status"></div>
+    </div>
+  </body>
+</html>
+
+<!-- <script src= "https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script type="text/javascript">
+    google.maps.event.AddDomListener(window, 'load', initilize);
+      function initilize(){
+        var autocomplete= new google.maps.places.Autocomplete(document.getElementByID('txtautocomplete'));
+        google.maps.events.addListener(autocomplete, 'place_changed', function(){
+          var places = autocomplete.getPlace();
+          var location='<b>Address:</b>' + places.formatted_address + "<br/>";
+          document.getElementByID('lblresult').innerHTML = location});
+    };</script>
+    <span>Location:</span> -->
